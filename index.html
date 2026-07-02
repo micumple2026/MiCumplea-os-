@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Etiquetas para WhatsApp -->
     <meta property="og:title" content="¡Mi 5to Cumpleaños! 👑✨">
     <meta property="og:description" content="¡Estás invitado a celebrar mis 5 años! 🎈🎊">
     <meta property="og:image" content="https://i.ibb.co/yFnGHXkC/1.jpg">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://micumple2026.github.io/MiCumplea-os/">
     
     <title>¡Mi 5to Cumpleaños! 👑✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
@@ -80,12 +80,12 @@
     <div class="confetti-overlay"></div>
 
     <audio id="birthdayMusic" loop playsinline>
-        <source src="música.mp3" type="audio/mpeg">
+        <source src="Música.mp3" type="audio/mpeg">
     </audio>
 
     <div class="start-overlay" id="startScreen">
         <img src="https://cdn.pixabay.com/animation/2023/11/07/14/26/14-26-02-708_512.gif" alt="Animación">
-        <p>¡Toca para ver la invitación! 🤗✨</p>
+        <p>¡Toca para ver la invitación! ✨</p>
     </div>
 
     <div class="card-container" id="invitationCard">
@@ -123,8 +123,7 @@
             const m = document.getElementById('minutes').innerText;
             const s = document.getElementById('seconds').innerText;
             
-            // Usamos encodeURIComponent para asegurar que los emojis se procesen correctamente
-            const texto = "¡Hola! 🤗¡Sí asistiré a tu cumpleaños! 🎉\n\nEstoy muy emocionado, ya estoy contando los días: faltan " + d + " días, " + h + " horas, " + m + " minutos y " + s + " segundos.🏃💨 \n\n¡Espero con ansias el gran día para celebrar juntos! 😊❣️";
+            const texto = "Hola! Si asistire a tu cumpleanos. Estoy muy emocionado, ya estoy contando los dias: faltan " + d + " dias, " + h + " horas, " + m + " minutos y " + s + " segundos. Espero con ansias el gran dia para celebrar juntos.";
             const msg = encodeURIComponent(texto);
             document.getElementById('waLink').href = `https://wa.me/51923118345?text=${msg}`;
         }
