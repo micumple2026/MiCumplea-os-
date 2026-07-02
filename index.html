@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Etiquetas para WhatsApp -->
     <meta property="og:title" content="¡Mi 5to Cumpleaños! 👑✨">
     <meta property="og:description" content="¡Estás invitado a celebrar mis 5 años! 🎈🎊">
-    <meta property="og:image" content="https://i.ibb.co/yFnGHXkC/1.jpg">
+    <meta property="og:image" content="https://i.ibb.co/4ZLtcmdj/1.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.ibb.co/gZNBx10d/FB-IMG-1781703399937.jpg" />
     
     <title>¡Mi 5to Cumpleaños! 👑✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
@@ -92,7 +90,7 @@
     <div class="card-container" id="invitationCard">
         <p class="subtitle">¡ESTÁS INVITADO A CELEBRAR MIS! 🎈🎊</p>
         <h1 class="age">5 AÑOS 🦄✨</h1>
-        <img src="1.jpg" alt="Foto" class="profile-img">
+        <img src="https://i.ibb.co/4ZLtcmdj/1.jpg" alt="Foto" class="profile-img">
 
         <div class="countdown-line">
             <div class="time-dias"><span id="days">00</span>d</div>
@@ -124,7 +122,6 @@
             const m = document.getElementById('minutes').innerText;
             const s = document.getElementById('seconds').innerText;
             
-            // Usamos encodeURIComponent para asegurar que los emojis se procesen correctamente
             const texto = "¡Hola! 🤗¡Sí asistiré a tu cumpleaños! 🎉\n\nEstoy muy emocionado, ya estoy contando los días: faltan " + d + " días, " + h + " horas, " + m + " minutos y " + s + " segundos.🏃💨 \n\n¡Espero con ansias el gran día para celebrar juntos! 😊❣️";
             const msg = encodeURIComponent(texto);
             document.getElementById('waLink').href = `https://wa.me/51923118345?text=${msg}`;
