@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Etiquetas para WhatsApp -->
+    <meta property="og:title" content="¡Mi 5to Cumpleaños! 👑✨">
+    <meta property="og:description" content="¡Estás invitado a celebrar mis 5 años! 🎈🎊">
+    <meta property="og:image" content="https://i.ibb.co/yFnGHXkC/1.jpg">
+    <meta property="og:type" content="website">
+    
     <title>¡Mi 5to Cumpleaños! 👑✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -99,18 +106,28 @@
             <p>📍 Camino Real #605 - Salas 🏡✨</p>
         </div>
 
-        <a href="https://wa.me/51999999999" class="btn-whatsapp">¡Confirmar asistencia! 💬🎈</a>
+        <a id="waLink" href="#" class="btn-whatsapp" onclick="actualizarMensaje()">¡Confirmar asistencia! 💬🎈</a>
     </div>
 
     <script>
         document.getElementById('startScreen').addEventListener('click', function() {
             this.classList.add('fly-away');
             document.getElementById('invitationCard').classList.add('show');
-            
-            // Reproducir música
             var audio = document.getElementById('birthdayMusic');
-            audio.play().catch(e => console.log("Reproducción bloqueada por el navegador"));
+            audio.play().catch(e => console.log("Reproducción bloqueada"));
         });
+
+        function actualizarMensaje() {
+            const d = document.getElementById('days').innerText;
+            const h = document.getElementById('hours').innerText;
+            const m = document.getElementById('minutes').innerText;
+            const s = document.getElementById('seconds').innerText;
+            
+            // Usamos encodeURIComponent para asegurar que los emojis se procesen correctamente
+            const texto = "¡Hola! 🤗¡Sí asistiré a tu cumpleaños! 🎉\n\nEstoy muy emocionado, ya estoy contando los días: faltan " + d + " días, " + h + " horas, " + m + " minutos y " + s + " segundos.🏃💨 \n\n¡Espero con ansias el gran día para celebrar juntos! 😊❣️";
+            const msg = encodeURIComponent(texto);
+            document.getElementById('waLink').href = `https://wa.me/51923118345?text=${msg}`;
+        }
 
         function updateCountdown() {
             const now = new Date().getTime();
